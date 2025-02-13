@@ -6,7 +6,7 @@ import {generateWorkout} from './utils/functions'
 
 function App() {
   const [workout,setWorkout] = useState(null)
-  const[poison,setPoison] = useState(['individual'])
+  const[poison,setPoison] = useState('individual')
   const[muscles,setMuscles] = useState([])
   const[goal,setGoal] = useState('strength_power')
 
@@ -17,6 +17,8 @@ function App() {
     let newWorkout = generateWorkout({poison,muscles,goal})
     console.log(newWorkout)
     setWorkout(newWorkout)
+
+    window.location.href = '#workout'
   }
 
   return (
